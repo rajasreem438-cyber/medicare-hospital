@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ doctor.name }} | MediCare Hospital</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        .profile-container{
+            width:70%;
+            margin:40px auto;
+            text-align:center;
+            border:1px solid #ddd;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.1);
+        }
+        .profile-container img{
+            width:250px;
+            height:250px;
+            border-radius:10px;
+            object-fit:cover;
+        }
+        .btn{
+            padding:10px 20px;
+            background:#007bff;
+            color:white;
+            text-decoration:none;
+            border-radius:5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>MediCare Hospital</h2>
+
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'doctors' %}">Doctors</a></li>
+            <li><a href="{% url 'departments' %}">Departments</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'appointment' %}">Appointment</a></li>
+            <li><a href="{% url 'blogs' %}">Blogs</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'emergency' %}">Emergency</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="profile-container">
+
+    {% if doctor.image %}
+        <img src="{{ doctor.image.url }}" alt="{{ doctor.name }}">
+    {% endif %}
+
+    <h2>{{ doctor.name }}</h2>
+
+    <p><strong>Department:</strong> {{ doctor.department }}</p>
+
+    <p><strong>Qualification:</strong> {{ doctor.qualification }}</p>
+
+    <p><strong>Experience:</strong> {{ doctor.experience }} Years</p>
+
+    <br>
+
+    <a href="{% url 'doctors' %}" class="btn">← Back to Doctors</a>
+
+</div>
+
+<footer style="text-align:center; margin-top:30px;">
+    <p>&copy; <span id="year"></span> MediCare Hospital. All Rights Reserved.</p>
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

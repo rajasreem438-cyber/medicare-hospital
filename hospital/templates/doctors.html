@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors | MediCare Hospital</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>MediCare Hospital</h2>
+
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'doctors' %}">Doctors</a></li>
+            <li><a href="{% url 'departments' %}">Departments</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'appointment' %}">Appointment</a></li>
+            <li><a href="{% url 'blogs' %}">Blogs</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'emergency' %}">Emergency</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2 style="text-align:center;">Our Expert Doctors</h2>
+
+    <div class="doctor-container">
+
+        {% for doctor in doctors %}
+
+        <div class="doctor-card" style="border:1px solid #ccc; padding:20px; margin:20px; text-align:center;">
+
+            {% if doctor.image %}
+                <img src="{{ doctor.image.url }}" alt="{{ doctor.name }}" width="200" height="200">
+            {% else %}
+                <p><b>No Image</b></p>
+            {% endif %}
+
+            <h3>{{ doctor.name }}</h3>
+
+            <p><strong>Department:</strong> {{ doctor.department }}</p>
+
+            <p><strong>Qualification:</strong> {{ doctor.qualification }}</p>
+
+            <p><strong>Experience:</strong> {{ doctor.experience }} Years</p>
+
+            <br>
+
+            <a href="{% url 'doctor_profile' doctor.id %}">
+                <button>View Profile</button>
+            </a>
+
+        </div>
+
+        {% empty %}
+
+        <h3 style="text-align:center; color:red;">No Doctors Available</h3>
+
+        {% endfor %}
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; <span id="year"></span> MediCare Hospital. All Rights Reserved.</p>
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
