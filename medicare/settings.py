@@ -12,7 +12,11 @@ SECRET_KEY = 'django-insecure-xzf)4&1z3ycc$n8$1ks*(%wdbba3y!zix!x+4@%z0&ghy!t=#m
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "medicare-hospital-zauc.onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
 
 # Installed Apps
 
