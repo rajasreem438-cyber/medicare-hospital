@@ -75,7 +75,7 @@ function Home() {
               <div className="card shadow h-100 text-center">
                 {doctor.image && (
                   <img
-                    src={`http://127.0.0.1:8000${doctor.image}`}
+                    src={`https://medicare-hospital-zauc.onrender.com/${doctor.image}`}
                     className="card-img-top"
                     alt={doctor.name}
                     style={{
