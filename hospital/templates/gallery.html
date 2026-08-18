@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | MediCare Hospital</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>MediCare Hospital</h2>
+
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'doctors' %}">Doctors</a></li>
+            <li><a href="{% url 'departments' %}">Departments</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'appointment' %}">Appointment</a></li>
+            <li><a href="{% url 'blogs' %}">Blogs</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'emergency' %}">Emergency</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2 style="text-align:center;">Hospital Gallery</h2>
+
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+
+        <img src="{% static 'images/hospital.jpg.jpeg' %}" alt="Hospital Building" width="300" height="200">
+
+        <img src="{% static 'images/reception.jpg.jpeg' %}" alt="Reception" width="300" height="200">
+
+        <img src="{% static 'images/operation_theatre.jpg.jpeg' %}" alt="Operation Theatre" width="300" height="200">
+
+        <img src="{% static 'images/icu.jpg.jpeg' %}" alt="ICU" width="300" height="200">
+
+        <img src="{% static 'images/laboratory.jpg.jpeg' %}" alt="Laboratory" width="300" height="200">
+
+        <img src="{% static 'images/ambulance.jpg.jpeg' %}" alt="Ambulance" width="300" height="200">
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; <span id="year"></span> MediCare Hospital. All Rights Reserved.</p>
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Blogs | MediCare Hospital</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>MediCare Hospital</h2>
+
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'doctors' %}">Doctors</a></li>
+            <li><a href="{% url 'departments' %}">Departments</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'appointment' %}">Appointment</a></li>
+            <li><a href="{% url 'blogs' %}">Blogs</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'emergency' %}">Emergency</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2 style="text-align:center;">Health Blogs</h2>
+
+    <div class="blog-card">
+        <h3>🥗 Healthy Eating Habits</h3>
+        <p>
+            A balanced diet with fruits, vegetables, whole grains, and plenty of water
+            helps maintain good health and prevents many diseases.
+        </p>
+        <a href="#">Read More</a>
+    </div>
+
+    <br>
+
+    <div class="blog-card">
+        <h3>🏃 Benefits of Daily Exercise</h3>
+        <p>
+            Exercising for at least 30 minutes a day improves heart health,
+            strengthens muscles, and reduces stress.
+        </p>
+        <a href="#">Read More</a>
+    </div>
+
+    <br>
+
+    <div class="blog-card">
+        <h3>😴 Importance of Quality Sleep</h3>
+        <p>
+            Adults should sleep 7–8 hours every night to improve physical health,
+            memory, and overall well-being.
+        </p>
+        <a href="#">Read More</a>
+    </div>
+
+    <br>
+
+    <div class="blog-card">
+        <h3>💧 Stay Hydrated</h3>
+        <p>
+            Drinking enough water every day keeps your body hydrated,
+            supports digestion, and improves energy levels.
+        </p>
+        <a href="#">Read More</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; <span id="year"></span> MediCare Hospital. All Rights Reserved.</p>
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

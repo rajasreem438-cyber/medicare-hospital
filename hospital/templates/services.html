@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | MediCare Hospital</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>MediCare Hospital</h2>
+
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'doctors' %}">Doctors</a></li>
+            <li><a href="{% url 'departments' %}">Departments</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'appointment' %}">Appointment</a></li>
+            <li><a href="{% url 'blogs' %}">Blogs</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'emergency' %}">Emergency</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section>
+    <h2 style="text-align:center;">Our Services</h2>
+
+    <div class="services">
+
+        <div class="service-card">
+            <h3>🚑 24×7 Emergency Care</h3>
+            <p>Round-the-clock emergency medical services with experienced doctors and staff.</p>
+        </div>
+
+        <br>
+
+        <div class="service-card">
+            <h3>💊 Pharmacy</h3>
+            <p>Well-stocked in-house pharmacy with all essential medicines available.</p>
+        </div>
+
+        <br>
+
+        <div class="service-card">
+            <h3>🧪 Laboratory</h3>
+            <p>Advanced diagnostic laboratory offering accurate and quick test results.</p>
+        </div>
+
+        <br>
+
+        <div class="service-card">
+            <h3>🚑 Ambulance Service</h3>
+            <p>24-hour ambulance service equipped with modern life-support facilities.</p>
+        </div>
+
+        <br>
+
+        <div class="service-card">
+            <h3>🩺 Health Checkup</h3>
+            <p>Comprehensive health checkup packages for individuals and families.</p>
+        </div>
+
+        <br>
+
+        <div class="service-card">
+            <h3>💻 Online Appointment</h3>
+            <p>Book appointments online with your preferred doctor quickly and easily.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; <span id="year"></span> MediCare Hospital. All Rights Reserved.</p>
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

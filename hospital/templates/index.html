@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Hospital</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav>
+        <h2>MediCare Hospital</h2>
+
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'doctors' %}">Doctors</a></li>
+            <li><a href="{% url 'departments' %}">Departments</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'appointment' %}">Appointment</a></li>
+            <li><a href="{% url 'blogs' %}">Blogs</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'emergency' %}">Emergency</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Welcome to MediCare Hospital</h1>
+    <p>Your Health, Our Priority</p>
+
+    <a href="{% url 'appointment' %}">
+        <button>Book an Appointment</button>
+    </a>
+</section>
+
+<!-- About -->
+<section class="about">
+    <h2>About Our Hospital</h2>
+
+    <p>
+        MediCare Hospital is dedicated to providing quality healthcare services
+        with experienced doctors, advanced medical technology, and compassionate care.
+        Our mission is to provide affordable, reliable, and patient-centered healthcare
+        for individuals and families.
+    </p>
+</section>
+
+<!-- Departments -->
+<section class="departments">
+    <h2>Our Departments</h2>
+
+    <ul>
+        <li>❤️ Cardiology</li>
+        <li>🧠 Neurology</li>
+        <li>🦴 Orthopedics</li>
+        <li>👶 Pediatrics</li>
+        <li>👁️ Ophthalmology</li>
+        <li>🩺 General Medicine</li>
+    </ul>
+</section>
+
+<!-- Services -->
+<section class="services">
+    <h2>Our Services</h2>
+
+    <ul>
+        <li>🚑 24×7 Emergency Care</li>
+        <li>🧪 Laboratory Services</li>
+        <li>💊 Pharmacy</li>
+        <li>🚑 Ambulance Service</li>
+        <li>🩺 Health Checkup Packages</li>
+        <li>💻 Online Appointment Booking</li>
+    </ul>
+</section>
+
+<!-- Emergency -->
+<section class="emergency">
+    <h2>Emergency Helpline</h2>
+
+    <h3>📞 +91 98765 43210</h3>
+
+    <p>Available 24 Hours a Day, 7 Days a Week</p>
+
+    <a href="{% url 'emergency' %}">
+        <button>Emergency Details</button>
+    </a>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 MediCare Hospital. All Rights Reserved.</p>
+</footer>
+
+<!-- JavaScript -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

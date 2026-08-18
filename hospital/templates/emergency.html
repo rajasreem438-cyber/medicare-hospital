@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency | MediCare Hospital</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>MediCare Hospital</h2>
+
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'doctors' %}">Doctors</a></li>
+            <li><a href="{% url 'departments' %}">Departments</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'appointment' %}">Appointment</a></li>
+            <li><a href="{% url 'blogs' %}">Blogs</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'emergency' %}">Emergency</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="emergency">
+    <h2>🚑 Emergency Services</h2>
+
+    <p>
+        Our Emergency Department is available
+        <strong>24 hours a day, 7 days a week</strong>
+        to provide immediate medical care for patients with serious illnesses and injuries.
+    </p>
+
+    <br>
+
+    <h3>Emergency Helpline</h3>
+    <h1>📞 +91 98765 43210</h1>
+
+    <br>
+
+    <h3>Ambulance Service</h3>
+    <p>Fast ambulance service with trained medical staff available 24×7.</p>
+
+    <br>
+
+    <h3>Emergency Facilities</h3>
+    <ul style="list-style:none; padding:0;">
+        <li>✅ 24×7 Emergency Care</li>
+        <li>✅ ICU & Critical Care</li>
+        <li>✅ Trauma Care Unit</li>
+        <li>✅ Emergency Surgery</li>
+        <li>✅ Advanced Life Support Ambulance</li>
+    </ul>
+
+    <br>
+
+    <a href="{% url 'appointment' %}">
+        <button>Book an Appointment</button>
+    </a>
+</section>
+
+<footer>
+    <p>&copy; <span id="year"></span> MediCare Hospital. All Rights Reserved.</p>
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
